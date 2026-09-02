@@ -56,11 +56,11 @@ autocmd InsertLeave * call ToggleNumbersOn()
 
 " Color Schemes
 " colorscheme Chasing_Logic
-colorscheme darkblue
+" colorscheme darkblue
 " colorscheme onedark
 " colorscheme mike
 " colorscheme void
-" colorscheme woju
+colorscheme woju
 
 " Put code comments in italics
 highlight Comment cterm=italic

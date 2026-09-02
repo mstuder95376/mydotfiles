@@ -8,8 +8,8 @@
     alias lm="ll|more"
 # Now if I can just remember all these dot aliases
     alias ..="cd .."
-    alias .2="cd ../.."
-    alias .3="cd ../../.."
+    alias ...="cd ../.."
+    alias ....="cd ../../.."
 # df and du in a human readable format
     alias df="df -khl"
     alias du="du -h"
@@ -37,6 +37,8 @@
     alias v='vim'
 # neovim alias
     alias nv='nvim'
+# helix aliases
+    alias hx='helix'
 # Make history not show number in front
     alias history='history -n'
     alias h='history'
@@ -55,6 +57,7 @@
 # Fuzzy finders
     alias pzf="pacman -Qq |fzf --preview='pacman -Qs {1}' |xargs -r pacman -Qi"
     alias vzf='vim $(fzf --preview="bat --color always {}")'
+    alias hzf='hx $(fzf --preview="bat --color always {}")'
     alias yzf="yay -Qq |fzf --preview='yay -Qs {1}' |xargs -r yay -Qi"
 # Extensions to bat
     alias man="batman"
@@ -68,9 +71,9 @@ function src {
 
 function sping {
     if ping -W 5 -c1 "$1" ; then
-      play -q ~/Sounds/deepsonar.mp3
+      mpg123 -q ~/Sounds/deepsonar.mp3
     else :
-      play -q ~/Sounds/Explosion1.mp3
+      mpg123 -q ~/Sounds/Explosion1.mp3
     fi
     }
 
